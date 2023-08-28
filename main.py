@@ -22,7 +22,7 @@ def decrypt(filename, key):
         encrypted_data = file.read()
         try:
             decrypted_data = f.decrypt(encrypted_data)
-        except InvalidToken:
+        except invalidToken:
             print("Invalid key")
             return
     with open(filename, "wb") as file:
